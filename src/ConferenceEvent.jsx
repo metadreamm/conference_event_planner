@@ -55,7 +55,7 @@ const ConferenceEvent = () => {
 
     const getItemsFromTotalCost = () => {
         const items = [];
-        venueItems.foreach((item) => {
+        venueItems.forEach((item) => {
             if(item.quantity > 0) {
                 items.push({ ...item, type: "venue"});
             }
@@ -86,7 +86,7 @@ const ConferenceEvent = () => {
         console.log(items);
         return <>
             <div className="display_box1">
-                {item.length === 0 && <p>No items selected</p>}
+                {items.length === 0 && <p>No items selected</p>}
                 <table className="table_item_data">
                     <thead>
                         <tr>
